@@ -1,0 +1,58 @@
+body {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+ 
+h1{
+    font-size: 70px;
+}
+
+h2 {
+    font-size: 55px;
+    margin-left: 50px;
+}
+  
+.countdown-container {
+    margin: 5rem;
+    padding: 20px;              /* 余白指定 */
+    background-color:  #fff;    /* 背景色指定 */
+    height: 150px;              /* 高さ指定 */
+}
+  
+.time-container {
+    display: flex;
+}
+
+.timer-set-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.image {
+    position: absolute; /* 絶対位置に設定 */
+    top: 200px;          /* 上から50px */
+    right: 350px;
+    bottom: 500px;
+    left: 850px;         /* 左から30px */
+}
+ul li{
+  list-style: none;
+  font-size: 50px;
+  user-select:none;
+  cursor:pointer;
+  position: relative;
+}
+ul li::before{
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 30%;
+  top: 12px;
+  left: -50px;
+  right: 10000px;
+}

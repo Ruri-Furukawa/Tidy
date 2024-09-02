@@ -1,0 +1,71 @@
+html, body {
+    font-family: serif;
+    font-size: 16px;
+}
+  
+.countdown-container {
+    margin: 5rem;
+    padding: 20px;              /* 余白指定 */
+    background-color:  #fff;    /* 背景色指定 */
+    height: 150px;              /* 高さ指定 */
+}
+  
+.time-container {
+    display: flex;
+}
+  
+.timer-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 32px;
+}
+.timer-set-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+#time {
+    font-size: 24px; /* フォントサイズを指定（px、em、remなどで調整可） */
+    font-weight: bold; /* 太字にする場合 */
+    color: #333; /* 文字の色を指定 */
+}
+
+.image {
+    position: absolute; /* 絶対位置に設定 */
+    top: 200px;          /* 上から50px */
+    right: 350px;
+    bottom: 500px;
+    left: 850px;         /* 左から30px */
+}
+ul li{
+  list-style: none;
+  font-size: 30px;
+  user-select:none;
+  cursor:pointer;
+  position: relative;
+}
+ul li::before{
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 30%;
+  background-image: url(oval.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: -50px;
+  right: 10000px;
+}
+ul li.checked{
+  color: #555;
+  text-decoration: line-through;
+}
+ul li.checked::before{
+  background-image: url(check.png);
+}
